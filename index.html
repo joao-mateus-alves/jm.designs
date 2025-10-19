@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JM Designs | Portfólio Criativo</title>
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- CSS externo -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body class="bg-[#FFFBF8] text-[#143755] font-sans antialiased">
+    <!-- NAVBAR -->
+    <header class="px-8 py-5 bg-[#FFFBF8] sticky top-0 z-50 shadow-sm">
+      <div class="flex justify-center">
+        <img
+          src="assets/logo.png"
+          alt="Logo JM Designs"
+          class="h-10 object-contain sm:h-16"
+        />
+      </div>
+    </header>
+
+    <!-- HERO -->
+    <section
+      id="inicio"
+      class="text-center py-24 px-6 bg-gradient-to-b from-[#FFFBF8] to-[#F7F9FA]"
+    >
+      <h1
+        class="text-4xl md:text-6xl font-extrabold leading-tight max-w-3xl mx-auto"
+      >
+        Criando
+        <span
+          class="text-[#204D72] whitespace-nowrap titulo-contorno"
+          >impacto visual</span
+        >
+        através do design
+      </h1>
+
+      <p
+        class="mt-6 text-lg md:text-xl text-[#204D72] opacity-90 max-w-2xl mx-auto"
+      >
+        Portfólios, identidades e artes digitais que elevam sua marca.
+      </p>
+
+      <a
+        href="#contato"
+        class="mt-10 inline-block bg-[#143755] text-[#FFFBF8] px-8 py-3 rounded-full text-lg font-semibold hover:bg-[#204D72] transition shadow-md"
+      >
+        Solicitar Orçamento
+      </a>
+    </section>
+
+    <!-- GALERIA ESTILO PINTEREST -->
+    <section id="portfolio" class="py-20 px-6 bg-white max-w-6xl mx-auto">
+      <div class="masonry">
+        <img src="assets/identidade.png" alt="Projeto 1" />
+        <img src="assets/identidade visual.png" alt="Projeto 2" />
+        <img src="assets/identidade (2).png" alt="Projeto 3" />
+        <img src="assets/identidade (1).png" alt="Projeto 4" />
+        <img src="assets/paleta.png" alt="Projeto 5" />
+        <img src="assets/teletec.png" alt="Projeto 6" />
+      </div>
+    </section>
+
+    <!-- CONTATO -->
+    <section
+      id="contato"
+      class="py-24 px-6 bg-[#143755] text-[#FFFBF8] text-center"
+    >
+      <h2 class="text-3xl md:text-4xl font-bold mb-6">Fale Comigo</h2>
+      <p class="mb-10 opacity-90 text-lg">
+        Escolha o tipo de serviço e envie sua solicitação diretamente pelo
+        WhatsApp.
+      </p>
+
+      <form
+        id="whatsappForm"
+        class="max-w-xl mx-auto grid gap-4"
+        onsubmit="enviarWhatsApp(event)"
+      >
+        <input
+          type="text"
+          id="nome"
+          name="nome"
+          placeholder="Seu nome"
+          class="p-3 rounded-md text-[#143755] focus:outline-none focus:ring-2 focus:ring-[#FFFBF8]"
+          required
+        />
+
+        <select
+          id="servico"
+          name="servico"
+          class="p-3 rounded-md text-[#143755] focus:outline-none focus:ring-2 focus:ring-[#FFFBF8]"
+          required
+        >
+          <option value="" disabled selected>Serviço desejado</option>
+          <option value="Criação de Logotipo">Criação de Logotipo</option>
+          <option value="Identidade Visual">Identidade Visual</option>
+          <option value="Post para Redes Sociais">
+            Post para Redes Sociais
+          </option>
+          <option value="Apresentação Comercial">
+            Apresentação Comercial
+          </option>
+          <option value="Site Portfólio">Site Portfólio</option>
+        </select>
+
+        <button
+          type="submit"
+          class="bg-[#FFFBF8] text-[#143755] px-8 py-3 rounded-full font-semibold hover:bg-[#204D72] hover:text-[#FFFBF8] transition"
+        >
+          Enviar para WhatsApp
+        </button>
+      </form>
+    </section>
+
+    <!-- SCRIPT WHATSAPP -->
+    <script>
+      function enviarWhatsApp(event) {
+        event.preventDefault();
+
+        const nome = document.getElementById("nome").value;
+        const servico = document.getElementById("servico").value;
+
+        const mensagem = `Olá! Meu nome é ${nome} e gostaria de solicitar um orçamento para: ${servico}.`;
+
+        const numero = "5514999018749"; // formato internacional
+        const url = `https://wa.me/${numero}?text=${encodeURIComponent(
+          mensagem
+        )}`;
+
+        window.open(url, "_blank");
+      }
+    </script>
+
+    <!-- RODAPÉ -->
+    <footer
+      class="text-center py-6 bg-[#FFFBF8] text-sm text-[#204D72] border-t border-[#204D72]/10"
+    >
+      © 2025 JM Designs. Todos os direitos reservados.
+    </footer>
+  </body>
+</html>
