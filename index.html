@@ -1,20 +1,22 @@
 <!doctype html>
 <html lang="pt-BR">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>JM Designs | Portfólio
-    </title>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>JM Designs | Portfólio</title>
 
-    <!-- Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class'
+    };
+  </script>
 
-    <!-- CSS externo -->
-    <link rel="stylesheet" href="style.css" />
-  </head>
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <link rel="stylesheet" href="style.css" />
+</head>
 
   <body class="bg-[#FFFBF8] text-[#143755] font-sans antialiased">
-    <!-- NAVBAR -->
     <header class="px-8 py-5 bg-[#FFFBF8] sticky top-0 z-50 shadow-sm">
       <div class="flex justify-center">
         <img
@@ -25,12 +27,10 @@
       </div>
     </header>
 
-    <!-- HERO -->
 <section
   id="inicio"
   class="relative text-center py-28 px-6 bg-gradient-to-b from-[#FDFCFB] to-[#F7F9FA] overflow-hidden"
 >
-  <!-- Efeito de fundo sutil -->
   <div class="absolute inset-0 opacity-10 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')]"></div>
 
   <div class="relative z-10 max-w-4xl mx-auto">
@@ -40,7 +40,7 @@
     >
       Transformando <span class="text-[#204D72]">ideias</span> em
       <span
-        class="text-transparent bg-clip-text bg-gradient-to-r from-[#204D72] to-[#4B93C0]"
+        class="text-transparent bg-clip-text bg-gradient-to-r from-[#376d99] to-[#4B93C0]"
       >
         experiências visuais
       </span>
@@ -72,9 +72,6 @@
   </div>
 </section>
 
-
-
-    <!-- PORTFÓLIO -->
     <section id="portfolio" class="py-20 px-6 bg-white max-w-6xl mx-auto">
       <div class="masonry">
         <img src="assets/identidade.png" alt="Projeto 1" />
@@ -83,10 +80,12 @@
         <img src="assets/identidade (1).png" alt="Projeto 4" />
         <img src="assets/paleta.png" alt="Projeto 5" />
         <img src="assets/teletec.png" alt="Projeto 6" />
+        <img src="assets/dullceriaSite.png" alt="dullceriaSite">
+        <img src="assets/polarte.png" alt="polarteSite">
+        <img src="assets/logosFeitas.png" alt="">
       </div>
     </section>
 
-    <!-- CONTATO -->
     <section
       id="contato"
       class="py-24 px-6 bg-[#143755] text-[#FFFBF8] text-center"
@@ -135,7 +134,6 @@
       </form>
     </section>
 
-    <!-- SCRIPT WHATSAPP -->
     <script>
       function enviarWhatsApp(event) {
         event.preventDefault();
@@ -145,7 +143,7 @@
 
         const mensagem = `Olá! Meu nome é ${nome} e gostaria de solicitar um orçamento para: ${servico}.`;
 
-        const numero = "5514999018749"; // formato internacional
+        const numero = "5514999018749";
         const url = `https://wa.me/${numero}?text=${encodeURIComponent(
           mensagem
         )}`;
@@ -154,7 +152,6 @@
       }
     </script>
 
-    <!-- RODAPÉ -->
     <footer
       class="text-center py-6 bg-[#FFFBF8] text-sm text-[#204D72] border-t border-[#204D72]/10"
     >
